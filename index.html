@@ -6,23 +6,23 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('outline');
 
   const channelMap = [
-    { ch: 1, name: "電腦音 / 主領翻譯", type: "Input", color: "bg-blue-50" },
-    { ch: 2, name: "一、領唱", type: "Mic", color: "bg-emerald-50" },
-    { ch: 3, name: "二、領唱", type: "Mic", color: "bg-emerald-50" },
-    { ch: 4, name: "三、領唱", type: "Mic", color: "bg-emerald-50" },
-    { ch: "5-8", name: "無線麥克風", type: "Mic", color: "bg-emerald-50" },
-    { ch: 9, name: "詩班收音", type: "Mic", color: "bg-yellow-50" },
-    { ch: 10, name: "鋼琴", type: "Inst", color: "bg-yellow-50" },
-    { ch: 11, name: "預備麥克風", type: "Mic", color: "bg-slate-100" },
-    { ch: 13, name: "錄音輸出 (勿動)", type: "Output", color: "bg-rose-100" },
-    { ch: "ST IN", name: "講台音源", type: "Input", color: "bg-orange-50" },
-    { ch: "Stereo", name: "總音量 (Master)", type: "Master", color: "bg-rose-200" }
+    { ch: 1, name: "電腦音 / 主領翻譯", type: "Input", color: "bg-blue-100" },
+    { ch: 2, name: "一、領唱", type: "Mic", color: "bg-green-100" },
+    { ch: 3, name: "二、領唱", type: "Mic", color: "bg-green-100" },
+    { ch: 4, name: "三、領唱", type: "Mic", color: "bg-green-100" },
+    { ch: "5-8", name: "無線麥克風", type: "Mic", color: "bg-green-50" },
+    { ch: 9, name: "詩班收音", type: "Mic", color: "bg-yellow-100" },
+    { ch: 10, name: "鋼琴", type: "Inst", color: "bg-yellow-100" },
+    { ch: 11, name: "預備麥克風", type: "Mic", color: "bg-gray-100" },
+    { ch: 13, name: "錄音輸出 (勿動)", type: "Output", color: "bg-red-100" },
+    { ch: "ST IN", name: "講台音源", type: "Input", color: "bg-orange-100" },
+    { ch: "Stereo", name: "總音量", type: "Master", color: "bg-red-200" }
   ];
 
   const obsSources = [
-    { name: "投影片放映 (PPT)", icon: <Presentation size={14} />, desc: "主螢幕訊息、歌詞同步" },
+    { name: "投影片放映", icon: <Presentation size={14} />, desc: "播放 PPT 或 Keynote 投影片" },
     { name: "詩告", icon: <List size={14} />, desc: "顯示歌詞、詩歌內容" },
-    { name: "教會投影系統", icon: <Monitor size={14} />, desc: "實體投影機訊號擷取" },
+    { name: "教會投影系統", icon: <Monitor size={14} />, desc: "擷取現場投影機送出的畫面" },
     { name: "視頻擷取裝置", icon: <Video size={14} />, desc: "主攝影機/導播機畫面" },
     { name: "麥克風/輸入音效 1", icon: <Mic size={14} />, desc: "來自 TF1 CH13 的專業混音" },
     { name: "顯示器擷取", icon: <Monitor size={14} />, desc: "備用桌面/臨時資訊顯示" }
@@ -125,7 +125,7 @@ const App = () => {
                     <div className="relative pl-6 border-l-2 border-amber-200">
                       <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-amber-500 border-2 border-white"></div>
                       <p className="font-black text-slate-800">20-35 min: OBS 與視覺溝通</p>
-                      <p className="text-sm text-slate-600 mt-1">直播音畫同步、PPT 投放與歌詞正確率。</p>
+                      <p className="text-sm text-slate-600 mt-1">直播音畫同步、投影片播放與歌詞正確率。</p>
                     </div>
                     <div className="relative pl-6 border-l-2 border-amber-200">
                       <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-amber-500 border-2 border-white"></div>
@@ -199,7 +199,7 @@ const App = () => {
                   </div>
                   <div className="space-y-6">
                     <div className="group">
-                      <p className="font-black text-amber-400 mb-2">3. PPT 同步投放 (Visuals)</p>
+                      <p className="font-black text-amber-400 mb-2">3. 投影片同步投放 (Visuals)</p>
                       <p className="text-sm text-slate-400">歌詞必須在歌手開唱前 0.5 秒到位。經文投放必須與講員朗讀同步。寧可提早，絕不延遲。</p>
                     </div>
                     <div className="group">
@@ -424,7 +424,7 @@ const App = () => {
                         <div className="h-6 bg-slate-200 rounded-full overflow-hidden flex shadow-inner">
                           <div className="h-full bg-blue-500 w-[70%]"></div>
                         </div>
-                        <p className="text-[10px] text-slate-400 mt-2 italic">※ 用於 PPT 音效或詩歌伴奏影片。</p>
+                        <p className="text-[10px] text-slate-400 mt-2 italic">※ 用於投影片音效或詩歌伴奏影片。</p>
                       </div>
                     </div>
                   </div>
