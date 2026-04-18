@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Settings, Power, Volume2, Mic, Music, Layout, HelpCircle, AlertTriangle, Monitor, Video, Radio, List, ShieldAlert, BookOpen, Clock, Users, Heart } from 'lucide-react';
+import { Settings, Power, Volume2, Mic, Music, Layout, HelpCircle, AlertTriangle, Monitor, Video, Radio, List, ShieldAlert, BookOpen, Clock, Users, Heart, Presentation } from 'lucide-react';
 
 const App = () => {
   const [mainCategory, setMainCategory] = useState('lecture'); // 'tf1', 'obs', or 'lecture'
@@ -126,7 +126,7 @@ const App = () => {
                     <li className="flex justify-between items-start">
                       <div>
                         <p className="font-bold text-slate-800 text-sm">20-35 min: 視覺與聽覺的橋樑</p>
-                        <p className="text-xs text-slate-500">OBS 實務：讓遠端信徒如同親臨現場。</p>
+                        <p className="text-xs text-slate-500">OBS 與 PPT 實務：傳遞準確的訊息內容。</p>
                       </div>
                       <span className="text-xs bg-slate-100 px-2 py-1 rounded">15m</span>
                     </li>
@@ -211,8 +211,14 @@ const App = () => {
                       重點練習：檢查「音訊進階屬性」，確保 TF1 CH13 進入 OBS 的延遲在 200ms 以內。
                     </p>
                   </div>
+                  <div className="p-4 border-l-4 border-orange-500 bg-orange-50">
+                    <p className="font-bold text-orange-900 flex items-center gap-2"><Presentation size={18}/> 3. PPT/投影片實作：視覺訊息的同步性</p>
+                    <p className="text-slate-600 mt-1">
+                      重點練習：確保歌詞、經文與主領者節奏完全同步。練習在 OBS 中使用「顯示器擷取」或「視窗擷取」來平滑切換 PPT 頁面。
+                    </p>
+                  </div>
                   <div className="p-4 border-l-4 border-rose-500 bg-rose-50">
-                    <p className="font-bold text-rose-900">3. 音樂會演練：突發靜音排除</p>
+                    <p className="font-bold text-rose-900">4. 音樂會演練：突發靜音排除</p>
                     <p className="text-slate-600 mt-1">
                       模擬練習：當主領麥克風沒電時，如何在 5 秒內無縫切換至「預備麥克風 (CH11)」。
                     </p>
